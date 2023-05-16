@@ -18,6 +18,10 @@ void solve_1(int n){
 }
 
 // 방법 2 : 재귀함수
+// 그래프 탐색의 관점으로 보기
+// 1) picked 벡터 : 많은 조합 중에 하나로서, 여러 종류의 벡터(조합)이 만들어진다.
+// 그래프 탐색과 다른 것은 무엇인가도 확인해야한다.
+// 2) toPick : 그래프에서 갈 수 있는 최대한의 거리
 void solve_2(int n, vector<int>& picked, int toPick){
     if(toPick==0){
         for(int i:picked) cout << i;
