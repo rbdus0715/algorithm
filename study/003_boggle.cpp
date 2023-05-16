@@ -31,6 +31,8 @@ bool search(int y, int x, string s){
 처음에는 그냥 for문 안에 search 함수가 그냥 있었다. 하지만 이렇게 될 경우 함수가 true/false를 반환하여 전체 함수가 종료되어 버린다.
 그렇기 때문에 if를 통해 search의 여부를 확인하고 맞을 때만 return true하여야 한다.
 #3: true가 될 조건을 모두 지나쳐버렸으므로 마지막은 false를 반환해야한다.
+
+// 다음에 풀 때 기저 사례와 종료 조건을 잘 파악해야겠다.
 */
 /*
 urlpm
