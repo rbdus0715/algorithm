@@ -28,31 +28,54 @@ move(int n, int x){
 
 #include <iostream>
 #include <stack>
+#define MAX 10000000
 using namespace std;
 
-int N;
+int N, cnt;
 stack<int> tower[3];
+int result[2][MAX];
 
 void move(int n, int from, int to) {
     if(n==1){
-        int base = tower[from-1].top();
-        tower[from-1].pop();
-        tower[to].push(base);
-        cout << "from : " << from << " " << "to : " << to << "\n";
+        int top = tower[from].top();
+        tower[from].pop();
+        tower[to].push(top);
+        if(N<20) {
+            result[0][cnt] = from+1; result[1][cnt] = to+1;
+        }
+        cnt++;
         return;
     }
     
-    int tempTo{0};
-    if(to==2) tempTo = 3;
-    else if(to==3) tempTo = 2;
+    int tempTo;
+    for(int i=0; i<3; i++){
+        if(i!=from && i!=to) tempTo = i;
+    }
     
     move(n-1, from, tempTo);
-    move(1, from, to);
+    
+    if(N<20){
+        result[0][cnt] = from + 1; result[1][cnt] = to + 1;   
+    }
+    cnt++;
+    
+    int base = tower[from].top();
+    tower[from].pop();
+    tower[to].push(base);
+
     move(n-1, tempTo, to);
 }
 
 int main() {
     cin >> N;
-    move(N, 1, 3);
+    for(int i=N; i>0; i--){
+        tower[0].push(i);
+    }
+    move(N, 0, 2);
+    cout << cnt << '\n';
+    if(N<=20){
+        for(int i=0; i<cnt; i++){
+            cout << result[0][i] << " " << result[1][i] << "\n";
+        }
+    }
 }
-
