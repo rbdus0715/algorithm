@@ -3,7 +3,6 @@
 using namespace std;
 
 int N, fence[MAX];
-int midHeight;
 
 // i 앞, j 뒤
 int solve(int i, int j) {
@@ -13,7 +12,7 @@ int solve(int i, int j) {
     
     int result = max(solve(i, mid), solve(mid + 1, j)); 
     int height = min(fence[mid], fence[mid+1]);
-    midHeight = height;
+    int midHeight = height;
     
     result = max(result, 2*height);
     
