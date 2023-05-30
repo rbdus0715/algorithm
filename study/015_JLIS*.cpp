@@ -1,3 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int A[101], B[101], aSize, bSize, dp[101][101];
+
+int d(int indexA, int indexB) {
+    int& ret = dp[indexA+1][indexB+1];
+    if(ret) return ret;
+    
+    ret = 2;
+    
+    long long a = (indexA == -1 ? -2e9 : A[indexA]);
+    long long b = (indexB == -1 ? -2e9 : B[indexB]);
+    long long maxElement = max(a, b);
+    
+    for(int i=indexA+1; i<aSize; i++) {
+        if(maxElement < A[i]) ret = max(ret, d(i, indexB)+1);
+    }
+    for(int i=indexB+1; i<bSize; i++) {
+        if(maxElement < B[i]) ret = max(ret, d(indexA, i)+1);
+    }
+    
+    return ret;
+}
+
+int main() {
+    cin >> aSize >> bSize;
+    for(int i=0; i<aSize; i++) cin >> A[i];
+    for(int i=0; i<bSize; i++) cin >> B[i];
+    
+    cout << d(-1, -1) - 2;
+}
+
 /*
 <idea>
 
