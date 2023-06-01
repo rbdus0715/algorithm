@@ -26,3 +26,48 @@
 
 # 계산 기하
 
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+const double PI = 2.0*acos(0.0); 
+
+// 2차원 벡터
+struct vector2 {
+    double x, y;
+    
+    // 생성자 함수
+    explicit vector2(double x_ = 0, double y_ = 0) : x(x_), y(y_) {}
+
+    // 벡터끼리의 비교 연산자
+    bool operator == (const vector2& rhs) const {
+        return x == rhs.x && y == rhs.y;
+    }
+    bool operator < (const vector2& rhs) const { 
+        return x != rhs.x ? x < rhs.x : y < rhs.y;
+    } // 끝점의 x 좌표가 작은 벡터일수록, x좌표가 같다면 y좌표가 작은 벡터일수록
+    
+    // 벡터끼리의 덧셈 뺄셈
+    vector2 operator + (const vector2& rhs) const {
+        return vector2(x+rhs.x, y+rhs.y);
+    }
+    vector2 operator - (const vector2& rhs) const {
+        return vector2(x-rhs.x, y-rhs.y);
+    }
+    
+    // 실수배
+    vector2 operator * (double rhs) const {
+        return vector2(x*rhs, y*rhs);
+    }
+    
+    // 벡터의 길이 반환
+    double norm() const {
+        return hypot(x, y); // hypot은 ㅂ;ㅅ
+    }
+    
+    
+}
+
+int main() {
+    cout << 1;
+}
