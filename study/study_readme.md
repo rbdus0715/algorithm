@@ -30,4 +30,4 @@
 # 정수론
 
 # 계산 기하
-
+[기하 계산도구](https://github.com/rbdus0715/algorithm/blob/main/study/cal_geometric.cpp) 
