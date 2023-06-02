@@ -7,7 +7,7 @@ int N;
 void solve(int size) {
     
     // 기저 사례
-    if(size==3) cout << "- -";
+    if(size==1) cout << "-";
     else {
         int nextSize = size/3;
         
@@ -23,9 +23,11 @@ void solve(int size) {
 }
 
 int main() {
-    cin >> N;
-    int size = pow(3, N);
-    solve(size);
+    while(cin>>N){
+        int size = pow(3, N);
+        solve(size);
+        cout << "\n";
+    }
 }
 
 /*
