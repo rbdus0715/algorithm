@@ -1,6 +1,8 @@
 [문제 링크](https://www.algospot.com/wiki/read/JMBook_%EB%AC%B8%EC%A0%9C%EB%93%A4_%EB%A7%81%ED%81%AC)
 
 계획: 1권에서는 동적 계획법이 어려운 난이도여서 1권 뒤쪽의 알고리즘을 메인으로 다루면서 공부하기
+도움을 많이 받은 문제 : *
+어려워서 미룬 문제 : #
 
 # Q001-007 : brute force, 재귀함수
 
