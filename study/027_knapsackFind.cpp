@@ -46,11 +46,15 @@ int main() {
         for(int j=0; j<=K; j++) dp[i][j] = -1;
     }
     
+    // 배낭 문제 결과 출력
     cout << d(0, K) << " ";
     
+    // 역추적을 통해서 실제 답 구하기
     tracking(0, K);
     
+    // 물건 개수
     cout << result.size() << "\n";
+    // 물건 출력
     for(int i:result) cout << thing[i] << "\n";
 }
 
