@@ -17,7 +17,7 @@ void generate(int n, int m, string s) {
 // 하지만 그렇게 되면 k가 엄청나게 커진다면 수행시간이 너무 커질 것이다
 int skip;
 
-void generate(int n, int m, string s) {
+void generate2(int n, int m, string s) {
     if(skip<0) return;
     if(m==0&&n==0) {
         if(skip==0) cout << s << '\n';
@@ -32,7 +32,7 @@ int main() {
     cin >> skip;
     skip--;
     string a = "";
-    generate(2, 2, a);
+    generate2(2, 2, a);
 }
 
 
