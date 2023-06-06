@@ -23,6 +23,8 @@
 - 동적 계획법을 뿌시자!
   - 최적해를 직접 계산하는 문제를 만난다면 >> 원래 바탕이 되는 문제를 풀어 dp를 마련하는데, 여기서 본 문제에 도움이 되는 정보를 배열에 저장해놓는다
     - ex) [LIS 실제로 출력하기](https://github.com/rbdus0715/algorithm/blob/main/study/026_LISfind.cpp) | [실제 배낭문제 답 구하기](https://github.com/rbdus0715/algorithm/blob/main/study/027_knapsackFind.cpp)
+  - k 번째 최적해를 찾는 문제
+    - ex) [k번째 모스부호 효율적으로 찾기](https://github.com/rbdus0715/algorithm/blob/main/study/029_morseKth.cpp)
 # 탐욕법
 
 # 조합 탐색
