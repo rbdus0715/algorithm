@@ -1,9 +1,7 @@
-#include <iostream>
-using namespace std;
 // 모스부호 k번째 계산하기
 
 
-
+// 풀이 (1)
 // 재귀를 이용한 완전탐색으로 모든 모스부호를 구할 수 있다
 void generate(int n, int m, string s) {
     if(m==0&&n==0) {
@@ -40,7 +38,7 @@ int main() {
 */
 
 
-
+// 풀이 (2)    
 // 위의 코드에서 조금만 개선을 해보자
 // skip의 수가 남은 m,n개의 점로 만들어질 수 있는 부호 조합이 같거나 크다면 그걸 굳이 세야할까?
 // m+nCm 만큼을 건너뛸 수 있는 것이다
@@ -62,8 +60,7 @@ void cal_bino() {
     }    
 }
 
-
-void generate2(int n, int m, string s) {
+void generate3(int n, int m, string s) {
     if(skip<0) return;
     if(m==0&&n==0) {
         if(skip==0) cout << s << '\n';
@@ -75,8 +72,8 @@ void generate2(int n, int m, string s) {
         return;
     }
     
-    if(n>0) generate2(n-1, m, s+'-');
-    if(m>0) generate2(n, m-1, s+'o');
+    if(n>0) generate3(n-1, m, s+'-');
+    if(m>0) generate3(n, m-1, s+'o');
 }
 
 int main() {
@@ -86,45 +83,3 @@ int main() {
     cal_bino();
     generate2(2, 2, a);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
