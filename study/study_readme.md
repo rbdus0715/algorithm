@@ -25,6 +25,11 @@
     - ex) [LIS 실제로 출력하기](https://github.com/rbdus0715/algorithm/blob/main/study/026_LISfind.cpp) | [실제 배낭문제 답 구하기](https://github.com/rbdus0715/algorithm/blob/main/study/027_knapsackFind.cpp)
   - k 번째 최적해를 찾는 문제 >> 완탐에서 시작해서 메모이제이션적용, skip개를 건너뛰고 첫 번째 답을 반환하는 재귀호출함수로 풀이 >> 건너뛰기 위해서는 개수를 미리 세어놔야함
     - ex) [k번째 모스부호 효율적으로 찾기](https://github.com/rbdus0715/algorithm/blob/main/study/029_morseKth.cpp) | [k-th LIS 구하기](https://github.com/rbdus0715/algorithm/blob/main/study/030_kthLIS.cpp) | [드래곤 커브 #](https://github.com/rbdus0715/algorithm/blob/main/study/031_dragonCurve%23.cpp)
+  - 정수 이외의 입력에 대한 메모이제이션
+    - 연관 배열 사용? map<벡터, 인트> cache : 단점은 접근 시간이나 컨테이너끼리 비교도 오래걸림
+    - 일대일 대응 함수 적용하기 : 입력을 적절하게 정수로 변환
+    - 입력이 순열인 경우 : 앞 자리가 4이면 그 순열 앞에 3*9!개의 입력이 옴
+    - 입력 범위가 좁을 경우 : 배열 [4, 0, 1, 7, 1] 은 자연수 40171로
 # 탐욕법
 
 # 조합 탐색
