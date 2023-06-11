@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+#define EPSILON 1e-6f
 
 const double PI = 2.0*acos(0.0);
 
@@ -10,6 +11,14 @@ struct vector2 {
    
     // 생성자 함수
     explicit vector2(double x_ = 0, double y_ = 0) : x(x_), y(y_) {}
+
+    /*
+    기본 연산 함수
+        - 비교 연산자
+        - 벡터끼리 덧뺄셈
+        - 실수배
+        - 벡터의 길이
+    */
 
     // 벡터끼리의 비교 연산자
     bool operator == (const vector2& rhs) const {
@@ -36,7 +45,16 @@ struct vector2 {
     double norm() const {
         return hypot(x, y); // hypot : 직각삼각형 빗변 길이
     }
-   
+    
+    
+    /*
+    응용 계산 함수
+        - 단위벡터 계산
+        - 벡터의 각도
+        - 내/외적
+        - 사영
+    */
+    
     // 방향이 같은 단위벡터를 반환
     vector2 normalize() const {
         return vector2(x/norm(), y/norm());
@@ -47,12 +65,12 @@ struct vector2 {
         return fmod(atan2(y, x) + 2*PI, 2*PI);
     }
    
-    // 내적 / 외적
+    // 내적 / 외적 (외적은 3차원 연산이므로 2차원에서는 double 형태로만 계산)
     double dot(const vector2& rhs) const {
         return x*rhs.x + y*rhs.y;
     }
-    vector2 cross(const vector2& rhs) const {
-        return vector2(x*rhs.y, -rhs.x*y);
+    double cross(const vector2& rhs) const {
+        return x*rhs.y - rhs.x*y;
     }
    
     // 이 벡터를 rhs에 사영
@@ -60,8 +78,16 @@ struct vector2 {
         vector2 r = rhs.normalize();
         return r*r.dot(*this);
     }
-   
 };
+
+
+/*
+두 벡터를 이용한 응용 연산
+    - 벡터 사잇각
+    - 사잇각이 90도인지
+    - 넓이
+    - 두 벡터의 방향성 확인
+*/
 
 double between_angle(vector2 a, vector2 b) {
    
@@ -77,11 +103,20 @@ bool isRightAngle(vector2 a, vector2 b) {
     return yes;
 }
 
+// double area(vector2 a, vector2 b) {
+    
+//     double area = 
+    
+//     return area;
+// }
+
+double ccw(vector2 a, vector2 b) {
+    return a.cross(b);
+}
 
 int main() {
     vector2 a = vector2(0,1);
     vector2 b = vector2(1,0);
-    cout << between_angle(a, b); // 3.14
+    cout << between_angle(a, b); // PI/2
     cout << isRightAngle(a, b); // true
-   
 }
