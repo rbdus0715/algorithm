@@ -38,9 +38,15 @@
   - 조합 게임 : 두 사람의 참가자가 하는 게임 (체스, 오목 등)
     - winner(state, player) = 게임의 현재 상태, player가 수를 둘 차례일 때 어느쪽이 최종적으로 이기는가?
     - 혹은 더 적은 정보를 주어, winner(state) = 현재 상태에서 이번의 수를둘 차례인 참가자가 이길까?
-    - ex) [틱택토](https://github.com/rbdus0715/algorithm/blob/main/study/035_tictactoe*.cpp) | [숫자게임]() | [블록게임]()
+    - ex) [틱택토](https://github.com/rbdus0715/algorithm/blob/main/study/035_tictactoe*.cpp) | [숫자게임](https://github.com/rbdus0715/algorithm/blob/main/study/036_numberGame*.cpp) | [블록게임](https://github.com/rbdus0715/algorithm/blob/main/study/037_blockGame%23.cpp)
   - 반복적 동적 계획법
-    - ex) [삼각형 위의 최대 경로]() | [회전초밥]() | [지니어스]()
+    - 부분 문제 간의 의존성을 파악하기 쉬울 경우 사용 : 아래에서부터 완성시킨다
+    - 슬라이딩 윈도를 통한 공간복잡도 줄이기 : 그때 그때 필요한 메모리만 사용한다
+    - 행렬의 거듭제곱 이용 (피보나치 수열)
+    - 반복적 동적계획법 vs 재귀적 동적계획법
+      - 재귀 : 직관적/부분 문제 간 의존 관계나 계산 순서 고민 필요 없음/전체 부분 문제중 일부의 답만 필요할 경우 더 빠르게 동작 but 슬라이딩 윈도 x 스택 오버플로 조심
+      - 반복 : 짧은 구현/재귀 호출의 부하가 없어 빠르게 동작/슬라이딩 윈도 but 비직관적 구현, 부분 문제간의 의존관계를 고려해 계산순서 고민해야함
+  - ex) [삼각형 위의 최대 경로]() | [회전초밥]() | [지니어스]()
 # 탐욕법
 
 # 조합 탐색
