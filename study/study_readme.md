@@ -19,7 +19,7 @@
     - 정렬 등의 방법을 이용하거나 해서 주어진 데이터/문제의 특성, 성질을 잘 파악하여 일반화하기
   - dp를 두 번 이상 쓸 경우도 있으니 대비하기! (최대합 경로에서 만들었던 dp 배열을 경로 개수 문제 dp에서 재활용)
 
-# Q026- : dynamic programing technique (6/5~)
+# Q026- : dynamic programing technique (6/5~6/15)
 - 동적 계획법을 뿌시자!
   - 최적해를 직접 계산하는 문제를 만난다면 >> 원래 바탕이 되는 문제를 풀어 dp를 마련하는데, 여기서 본 문제에 도움이 되는 정보를 배열에 저장해놓는다
     - ex) [LIS 실제로 출력하기](https://github.com/rbdus0715/algorithm/blob/main/study/026_LISfind.cpp) | [실제 배낭문제 답 구하기](https://github.com/rbdus0715/algorithm/blob/main/study/027_knapsackFind.cpp)
