@@ -18,7 +18,7 @@
     > 이어지는 경우의 케이스를 나눠서 풀이
     > 꼭 재귀로만 생각하지 말고 반복적dp로도 생각해보기
     > i번째 dp를 계산할 때 꼭 전 단계의 dp를 이용해서 i를 완성시키려고 하는 것이 아니라 i+1을 완성시키는 생각도 해보기
-  - [5557]([https://github.com/rbdus0715/algorithm/blob/main/boj/dynamic_programming/1006*.cpp](https://github.com/rbdus0715/algorithm/blob/main/boj/dynamic_programming/5557.cpp))
+  - [5557](https://github.com/rbdus0715/algorithm/blob/main/boj/dynamic_programming/5557.cpp)
     > 완전 탐색으로 하면 2의 지수 함수의 시간 복잡도가 나오는 문제이지만<br>
     > 문제에 범위가 주어져 그것을 dp의 한 차원으로 사용하였다. -> 반복적 동적 계획법
 ## 재귀
