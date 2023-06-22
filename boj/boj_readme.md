@@ -23,4 +23,7 @@
     - 문제에 범위가 주어져 그것을 dp의 한 차원으로 사용하였다. -> 반복적 동적 계획법
 - [17404](https://github.com/rbdus0715/algorithm/blob/main/boj/dynamic_programming/17404.cpp)
     - 최소를 구하는 문제에서 기저사례는 1e9 즉 무한대를 반환한다 이는 반복적 동적 계획법에서도 마찬가지
+- [2618](https://github.com/rbdus0715/algorithm/blob/main/boj/dynamic_programming/2618*.cpp)
+    - 신기한 메모이제이션 + reconstruction
+    - 내가 생각하던 메모이제이셙 고정관념은 dp[i]로 해서 i번째 사건일 때의 값을 불러오는 것이었는데, 이 문제에서는 어떤 상황이 주어졌을 때 이것이 몇 번째 상황인지 알 수 있어서 그걸 메모이제이션 했다. 예를 들어 dp[경찰차 1의 위치][경찰차 2의 위치] 이렇게 dp에 상황을 저장하는 것이다.
 ## 재귀
