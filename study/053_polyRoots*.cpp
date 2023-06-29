@@ -1,11 +1,5 @@
 /*
 문제 : 다음 함수를 완성시키기
-틀린 부분 찾기..
-
-#include <iostream>
-#include <cmath>
-#include <vector>
-using namespace std;
 
 // 다항식의 계수가 주어질 때 미분한 결과의 계수 반환
 vector<double> differentiate(const vector<double>& poly);
@@ -68,7 +62,7 @@ double evaluate(const vector<double>& poly, double x0) {
     double ret = 0;
     
     for(int i=0; i<=n; i++)
-        ret += pow(x0, n-1)*poly[i];
+        ret += pow(x0, n-i)*poly[i];
     
     return ret;
 }
@@ -92,7 +86,7 @@ vector<double> solve(const vector<double>& poly) {
     for(int i=0; i<solve_de.size()-1; i++) {
         double x1 = solve_de[i], x2 = solve_de[i+1];
         double y1 = evaluate(poly, x1), y2 = evaluate(poly, x2);    
-        
+
         if(y1*y2>0) continue;
         
         if(y1>y2) {
