@@ -86,7 +86,7 @@
 # Q057- : 정수론 (6/30~)
   - 소수
     - 소수판별, 소인수분해, 에라토스테네스의 체, 이라토스테네스의 체를 이용한 소인수분해
-    - 유클리드 알고리즘
-    - 모듈라 연산
+  - 유클리드 알고리즘
+  - 모듈라 연산
 # 계산 기하
 - [기하 계산도구](https://github.com/rbdus0715/algorithm/blob/main/study/reusable_cal_geometric.cpp)
