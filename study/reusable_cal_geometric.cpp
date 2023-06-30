@@ -110,6 +110,7 @@ bool isRightAngle(vector2 a, vector2 b) {
 //     return area;
 // }
 
+// 벡터 b가 벡터 a의 반시계 방향이면 양수, 시계 방향이면 음수, 평행이면 0
 double ccw(vector2 a, vector2 b) {
     return a.cross(b);
 }
