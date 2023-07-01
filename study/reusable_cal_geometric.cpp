@@ -115,6 +115,23 @@ double ccw(vector2 a, vector2 b) {
     return a.cross(b);
 }
 
+// 두 직선의 교점 : 두 직선 ab, cd
+bool lineIntersection(vector2 a, vector2 b, vector2 c, vector2 d, vector2& x) {
+    double det = (b-a).cross(d-c);
+    
+    if(fabs(det)<EPSILON) return false;
+    x = a + (b-a) * ((c-a).cross(d-c)/det);
+    return true;
+}
+
+// 점과 선 사이의 거리
+vector2 foot(vector2 p, vector2 a, vector2 b) {
+    return a + (p-a).project(b-a);
+}
+double pointToLine(vector2 p, vector2 a, vector2 b) {
+    return (p-foot(p,a,b)).norm();
+}
+
 int main() {
     vector2 a = vector2(0,1);
     vector2 b = vector2(1,0);
