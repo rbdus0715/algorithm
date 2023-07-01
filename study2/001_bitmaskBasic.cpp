@@ -57,6 +57,22 @@ int main() {
     gcc/g++ : __builtin_ctz(a);
     visual c++ : _BitScanForward(&index, a);
     */
+
+    // 최하위 비트를 직접 구하기 ex) 40 -> 100100 -> 3번째 비트 -> 8
+    // 2의 보수를 and 연산 하기
+    int a = 40;
+    int b = (a & -a);
+
+    // 최소 원소 지우기
+    int a = 40;
+    a &= (a - 1);
+
+
+    // 모든 집합 순회하기
+    int a = 40;
+    for(int i=a; i; i=((i-1) & a)) {
+        cout << i << " ";
+    }
 }
 
 
