@@ -24,7 +24,28 @@
   - 큐 : 조세푸스 문제를 원형 큐로 돌려 쉽게 풀 수 있다.
   - 스택 : 울타리 자르기 문제에서 o(n) 시간만에 스위핑과 스택을 통해 쉽게 가능함 > i번째 울타리를 스위핑 하면서 아직 오른쪽 끝이 나지 않은 막대들을 모두 스택에 넣어두고 한번에 처리할 
 # 트리
+- 기본 원리
+```
+struct TreeNode {
+    int x;
+    TreeNode* parent;
+    vector<TreeNode*> children;
+}
 
+void print(TreeNode* root) {
+    cout << root->x << endl;
+    for(int i=0; i<root->children.size(); i++)
+        print(root->children[i]);
+}
+
+int height(TreeNode* root) {
+    int h = 0;
+    for(int i=0; i<root->children.size(); i++)
+        h = max(h, 1 + height(root->children[i]));
+    
+    return h;
+}
+```
 # 그래프
 
 # 문자열
