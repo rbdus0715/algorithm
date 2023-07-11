@@ -24,28 +24,6 @@
   - 큐 : 조세푸스 문제를 원형 큐로 돌려 쉽게 풀 수 있다.
   - 스택 : 울타리 자르기 문제에서 o(n) 시간만에 스위핑과 스택을 통해 쉽게 가능함 > i번째 울타리를 스위핑 하면서 아직 오른쪽 끝이 나지 않은 막대들을 모두 스택에 넣어두고 한번에 처리할 
 # 트리
-- 기본 원리
-```
-struct TreeNode {
-    int x;
-    TreeNode* parent;
-    vector<TreeNode*> children;
-}
-
-void print(TreeNode* root) {
-    cout << root->x << endl;
-    for(int i=0; i<root->children.size(); i++)
-        print(root->children[i]);
-}
-
-int height(TreeNode* root) {
-    int h = 0;
-    for(int i=0; i<root->children.size(); i++)
-        h = max(h, 1 + height(root->children[i]));
-    
-    return h;
-}
-```
 - [트리의 순회]()
   - 전위순회 : 맨 처음에 루트를 방문, 왼쪽과 오른쪽 서브트리를 순서대로 방문
   - 중위순회 : 왼쪽과 오른쪽 서브트리 사이에 트리의 루트를 방문
@@ -58,6 +36,10 @@ int height(TreeNode* root) {
   - x보다 작은 원소의 수 찾기 / k번째 원소 찾기 쉽게 구현 가능
   - 시간 복잡도 : 최대 재귀 호출의 횟수는 O(h) 트리의 높이 >> 높이가 낮아야 좋음 >> 균형잡힌 트리
 - 균형 잡힌 이진트리 (트리의 높이가 항상 O(logN)을 유지, 대표적으로 레드-블랙 트리, 표준 라이브러리의 이진 검색 트리 구현도 레드-블랙 트리로 만들어짐)
+- 우선순위 큐와 힙
+  - 힙 : 부모 노드가 가진 원소는 항상 자식 노드가 가진 원소 이상이어야 함 [구현 소스코드](https://github.com/rbdus0715/algorithm/blob/main/study2/011_heap.cpp)
+  - 균형잡힌 힙이 되도록 하는 규칙 : 마지막 레벨을 제외한 모든 레벨에 노드가 꽉 차있음 / 마지막 레벨에 노드가 있을 때는 항상 가장 왼쪽부터 순서대로 채워져 있어야 함
+
 
 # 그래프
 
