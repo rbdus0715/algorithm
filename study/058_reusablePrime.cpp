@@ -22,7 +22,7 @@ bool isPrime(int n) {
 vector<int> factorSimple(int n) {
     vector<int> ret;
     int sqrtn = int(sqrt(n));
-    for(int i=2; i<sqrtn; i++) {
+    for(int i=2; i<=sqrtn; i++) {
         while(n%i==0) {
             n/=i;
             ret.push_back(i);
