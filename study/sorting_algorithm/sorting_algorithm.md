@@ -17,6 +17,7 @@ arr_sorted = sorted(arr, key=lambda x : x[1)
 arr_sorted = sorted(arr, key=lambda x : (x[0], -x[1]))
 ```
 **딕셔너리 정렬**
+
 (1) key 정렬
 ```python
 d = {"dream": 0, "car": 99, "blockdmask": 1, "error": 30, "app": 20}
