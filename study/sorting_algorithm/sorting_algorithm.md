@@ -2,11 +2,10 @@
 **1. sort, sorted**
 - sort는 리스트.sort() 형식으로, 리스트 원본값을 직접 수정한다.
 - sorted는 sorted(리스트) 형식으로, 원본값은 그대로이고 정렬값을 반환한다.
-**오름차순**
-list.sort(reverse=False)
-**내림차순**
-list.sort(reverse=True)
-**lambda**
+- 오름차순 list.sort(reverse=False)
+- 내림차순 list.sort(reverse=True)
+
+**2. lambda**
   
 ```python
 ## key 인자에 함수 넘겨주면 해당 함수의 반환값을 비교하여 순서대로 정렬한다.
@@ -17,7 +16,7 @@ arr_sorted = sorted(arr, key=lambda x : x[1)
 ## 첫 번째 인자를 기준으로 오름차순, 두번째 기준으로 내림차순 정렬하면
 arr_sorted = sorted(arr, key=lambda x : (x[0], -x[1]))
 ```
-**2. 딕셔너리 정렬**
+**3.. 딕셔너리 정렬**
 
 (1) key 정렬
 ```python
