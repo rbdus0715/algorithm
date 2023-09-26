@@ -16,7 +16,7 @@ arr_sorted = sorted(arr, key=lambda x : x[1)
 ## 첫 번째 인자를 기준으로 오름차순, 두번째 기준으로 내림차순 정렬하면
 arr_sorted = sorted(arr, key=lambda x : (x[0], -x[1]))
 ```
-**3.. 딕셔너리 정렬**
+**3. 딕셔너리 정렬**
 
 (1) key 정렬
 ```python
