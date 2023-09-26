@@ -1,5 +1,5 @@
 # 파이썬 정렬 (은정이를 위한)
-**sort, sorted**
+**1. sort, sorted**
 - sort는 리스트.sort() 형식으로, 리스트 원본값을 직접 수정한다.
 - sorted는 sorted(리스트) 형식으로, 원본값은 그대로이고 정렬값을 반환한다.
 **오름차순**
@@ -17,7 +17,7 @@ arr_sorted = sorted(arr, key=lambda x : x[1)
 ## 첫 번째 인자를 기준으로 오름차순, 두번째 기준으로 내림차순 정렬하면
 arr_sorted = sorted(arr, key=lambda x : (x[0], -x[1]))
 ```
-**딕셔너리 정렬**
+**2. 딕셔너리 정렬**
 
 (1) key 정렬
 ```python
