@@ -9,5 +9,3 @@ def isPrime(n):
             return False
     
     return True
-
-isPrime(13)
