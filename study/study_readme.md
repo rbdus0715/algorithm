@@ -91,4 +91,4 @@
 - [기하 계산도구](https://github.com/rbdus0715/algorithm/blob/main/study/reusable_cal_geometric.cpp)
 
 # 추가: python
-### 정렬 [readme](https://github.com/rbdus0715/algorithm/blob/main/study/sorting_algorithm/sorting_algorithm.md)
+### 정렬 [readme](https://github.com/rbdus0715/algorithm/blob/main/study/python/sorting_algorithm/sorting_algorithm.md)
