@@ -34,3 +34,4 @@ def solve(check_board):
 
 ### 유명 문제들
 1. knight's tour [문제](https://www.geeksforgeeks.org/the-knights-tour-problem/?ref=lbp) | [풀이](https://github.com/rbdus0715/algorithm/blob/main/study/python/back_tracking/knights_tour.py)
+백트래킹이 knight's tour problem을 푸는 가장 좋은 방법인건 아님. 휴리스틱한 방법이 더 좋은 성능을 보일 수 있음.
