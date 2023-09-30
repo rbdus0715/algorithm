@@ -33,7 +33,7 @@ def solve(check_board):
 - 반면, 백트래킹으로밖에 풀지 못하는 문제도 있다.
 
 ### 유명 문제들
-1. knight's tour [문제](https://www.geeksforgeeks.org/the-knights-tour-problem/?ref=lbp) | [풀이](https://github.com/rbdus0715/algorithm/blob/main/study/python/back_tracking/knights_tour.py)
+1. knight's tour | [문제](https://www.geeksforgeeks.org/the-knights-tour-problem/?ref=lbp) | [풀이](https://github.com/rbdus0715/algorithm/blob/main/study/python/back_tracking/knights_tour.py)
 백트래킹이 knight's tour problem을 푸는 가장 좋은 방법인건 아님. 휴리스틱한 방법이 더 좋은 성능을 보일 수 있음.
-2. rat in maze [문제](https://www.geeksforgeeks.org/rat-in-a-maze/?ref=lbp) | [풀이](https://github.com/rbdus0715/algorithm/tree/main/study/python/back_tracking)
+2. rat in maze | [문제](https://www.geeksforgeeks.org/rat-in-a-maze/?ref=lbp) | [풀이](https://github.com/rbdus0715/algorithm/tree/main/study/python/back_tracking)
 앞선 문제와 달리 2차원 배열 하나를 더 사용했다. maze 배열은 미로 확인용, curState는 지금 내가 가는 경로 체크용
