@@ -33,4 +33,4 @@ def solve(check_board):
 - 반면, 백트래킹으로밖에 풀지 못하는 문제도 있다.
 
 ### 유명 문제들
-[link](https://www.geeksforgeeks.org/top-20-backtracking-algorithm-interview-questions/)
+1. knight's tour [문제](https://www.geeksforgeeks.org/the-knights-tour-problem/?ref=lbp) | [풀이](https://github.com/rbdus0715/algorithm/blob/main/study/python/back_tracking/knights_tour.py)
