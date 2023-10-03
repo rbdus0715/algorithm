@@ -30,3 +30,7 @@
 
 ## 삼분탐색
 - [8986](https://github.com/rbdus0715/algorithm/blob/main/boj/ternary_search/8986.cpp)
+
+## python
+- 동적 계획법 : python에서는 특히 최대한 반복적 동적 계획법으로 풀어서 재귀 호출로 인한 에러가 없도록 해야한다.
+- min, max를 비교할 2e9같은 수들은 실수이기 때문에 소숫점이 있어 틀릴 위험이 있기 때문에 문제 형태가 float이 아닌이상 min 혹은 max에 int() 처리를 해줄 필요가 있다.
