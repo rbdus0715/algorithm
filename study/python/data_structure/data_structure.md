@@ -75,8 +75,24 @@ del d['d']
 d.clear()
 ```
 
-
-
+## 우선순위 큐
+```python
+import heapq
+hq = []
+# 원소 넣기
+heapq.heappush(hq, item)
+# 원소 빼기
+heapq.heappop(hq)
+# 반환하지 않고 접근하고 싶다면
+heap[0]
+# 리스트 x를 선형 시간으로 heap으로 변환
+heapq.heapify(x)
+```
+- 기본적으로 heapq는 최소 힙 기준으로 만들어져 최대 힙을 구현하기 위해서는 다음과 같이 (-1)을 곱한다.
+```python
+heapq.heappush(hq, -item)
+heapq.heappop(hq, -item)
+```
 
 
 
