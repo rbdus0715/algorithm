@@ -92,5 +92,3 @@
 
 # 추가: python
 ### 정렬 [readme](https://github.com/rbdus0715/algorithm/blob/main/study/python/sorting_algorithm/sorting_algorithm.md)
-### 동적 계획법
-- python에서는 특히 최대한 반복적 동적 계획법으로 풀어서 재귀 호출로 인한 에러가 없도록 해야한다.
