@@ -1,5 +1,8 @@
 # 그래프 탐색 DFS, BFS
 
+## 주의해야 할 문제 유형
+[뱀과 사다리 게임](https://www.acmicpc.net/problem/16928) : queue에 삽입할 때 우선순위대로 잘 들어가고 있는지 확인해보자.
+
 ## 입력
 ```python
 from sys import stdin
