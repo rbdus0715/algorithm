@@ -2,7 +2,7 @@
 
 ## 전위순회, 중위순회, 후위순회
 [1991](https://www.acmicpc.net/problem/1991) 정답 코드
-```
+```python
 class Node:
     def __init__(self, data, left_node, right_node):
         self.data = data
