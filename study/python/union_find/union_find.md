@@ -30,7 +30,7 @@ for i in range(1, v+1):
 ```
 
 
-## 합집합 (작은 수를 우선적으로 부모로 설정한다고 가정)
+## union(merge) and find (작은 수를 우선적으로 부모로 설정한다고 가정)
 ```python
 def find_parent(parent, x):
   if parent[x] != x:
