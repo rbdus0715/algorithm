@@ -33,22 +33,22 @@ for i in range(1, v+1):
 ## union(merge) and find (작은 수를 우선적으로 부모로 설정한다고 가정)
 ```python
 def find_parent(parent, x):
-  if parent[x] != x:
-    return find_parent(parent, parent[x])
-  return x
+    if parent[x] != x:
+        return find_parent(parent, parent[x])
+    return x
 
 ''' find 함수 최적화
 def find_parent(parent, x):
     if parent[x] != x: 
-        parent[x] = find_parent(parent[x])
+        parent[x] = find_parent(parent, parent[x])
     return parent[x]
 '''
 
 def union_parent(parent, a, b):
-  a = find_parent(parent, a)
-  b = find_parent(parent, b)
-  if a<b:
-    parent[b] = a
-  else:
-    parent[a] = b
+    a = find_parent(parent, a)
+    b = find_parent(parent, b)
+        if a<b:
+            parent[b] = a
+    else:
+        parent[a] = b
 ```
