@@ -71,10 +71,7 @@ while n!=0 or m!=0:
             continue
         ans += edge[2]
         merge(edge[0], edge[1])
-    print(total - ans)
-    
-    
-    
+    print(total - ans) 
     
     n, m = map(int, input().split())
 ```
