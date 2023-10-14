@@ -5,7 +5,7 @@
 - 사이클이 생기는지 확인은 union-find를 통해 확인
 
 **예시(1) 가중치가 모두 1인 그래프에서 최소 스패닝 트리 찾기 [백준 1197](https://www.acmicpc.net/problem/1197)**
-```
+```python
 def find(x):
     if parent[x] != x:
         parent[x] = find(parent[x])
