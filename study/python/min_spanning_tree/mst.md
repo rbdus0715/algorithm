@@ -39,3 +39,42 @@ for _ in range(int(input())):
 #### 풀이2
 가중치가 모두 1인 최소 스패닝 트리의 간선 개수는 V-1개이다.
 
+**예시(2) 가중치가 1이 아닌 그래프 [백준 6497](https://www.acmicpc.net/problem/6497)**
+```python
+def find(x):
+    if parent[x] != x:
+        parent[x] = find(parent[x])
+    return parent[x]
+
+def merge(x, y):
+    x = find(x)
+    y = find(y)
+    if x!=y:
+        parent[y] = x
+
+n, m = map(int, input().split())
+while n!=0 or m!=0:
+    
+    parent = [i for i in range(n)]
+    
+    edges = []
+    total = 0
+    for i in range(m):
+        x, y, w = map(int, input().split())
+        edges.append([x, y, w])
+        total += w
+    edges.sort(key=lambda x:x[2])
+    
+    ans = 0
+    for edge in edges:
+        if find(edge[0]) == find(edge[1]):
+            continue
+        ans += edge[2]
+        merge(edge[0], edge[1])
+    print(total - ans)
+    
+    
+    
+    
+    n, m = map(int, input().split())
+```
