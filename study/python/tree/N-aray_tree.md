@@ -31,11 +31,8 @@ def inorder(self, node):
         return
     
     total = len(node.children)
-    
     for i in range(total-1):
         self.inorder(node.children[i])
-    
     print(node.data, end=' ')
-    
     self.inorder(node.children[total-1])
 ```
