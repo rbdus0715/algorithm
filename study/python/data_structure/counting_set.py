@@ -40,6 +40,8 @@ count = Counter(arr)
 # 숫자 n이 몇 번 들어있는지 확인하는 방법
 num = count[n]
 ```
+# **중요**
+# Counter 객체끼리 빼는 연산도 가능함
 
 
 # 네 번째 방법
