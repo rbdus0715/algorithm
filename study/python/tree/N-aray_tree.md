@@ -36,3 +36,9 @@ def inorder(self, node):
     print(node.data, end=' ')
     self.inorder(node.children[total-1])
 ```
+
+## (3) 리프 노드 개수
+- N : N개 자식을 가지는
+- I : I개의 부모가 있을 때
+- 이때 모든 부모는 N개씩 자식을 가짐
+> L = I * (N - 1) + 1
